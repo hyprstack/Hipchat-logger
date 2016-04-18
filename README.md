@@ -13,8 +13,6 @@ __Note:__ Detailed instructions on how to use and working code to come shortly!
 
 ### Notes:
 
- - Storage? 
-    [] Redis
-    Should I use redis to store the permanent access token (valid until 2022) retrieved from hipchat?   
+ - __Storage?__ Should I use redis to store the permanent access token (valid until 2022) retrieved from hipchat?   
  - Is there a url I can send a request to, in order to retrieve this [personal access token](https://developer.atlassian.com/hipchat/guide/hipchat-rest-api/api-access-tokens)?
  - If there isn't, how can I make my project any better/different from [nkohari](https://github.com/nkohari/node-hipchat)?
