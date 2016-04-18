@@ -1,0 +1,30 @@
+{
+  "name": "Node-Hipchat-Logger",
+  "version": "0.0.1",
+  "description": "Node-HipChat Message Logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyprstack/Hipchat-logger.git"
+  },
+  "keywords": [
+    "Node",
+    "Hipchat",
+    "Logger",
+    "Logs",
+    "Logging"
+  ],
+  "author": {
+    "name": "Mario Mendes",
+    "twitter": "https://twitter.com/hyprstack",
+    "github": "https://github.com/hyprstack"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyprstack/Hipchat-logger/issues"
+  },
+  "homepage": "https://github.com/hyprstack/Hipchat-logger"
+}
