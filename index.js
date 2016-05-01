@@ -12,7 +12,7 @@ function HipChatLogger(params) {
   var self = this;
 
   var defaults = {
-    'room-name': '', //room id for hipchat
+    'roomId': '', //room id for hipchat
     'notify': false // default is set to false - true sets room notification for user
   };
   if (!params['room-name']) {
@@ -27,7 +27,7 @@ function HipChatLogger(params) {
       msg = JSON.stringify(msg, null, 2);
     }
     var access_token = jsonfile.readFileSync('./config.json')['hip-chat-access-token'];
-    requestHandle.sendHipMessage(self.config['room-name'], colour, msg, fnName, self.config.notify, access_token);
+    requestHandle.sendHipMessage(self.config.roomId, colour, msg, fnName, self.config.notify, access_token);
   };
 
   self.info = function (msg, fnName) {
