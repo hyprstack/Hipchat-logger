@@ -19,9 +19,9 @@ __Set-up__
 
 
 ```javascript
-var hipLoggerObj = require('Node-Hipchat-Logger');
+var HipLoggerObj = require('Node-Hipchat-Logger');
 
-var hipLogger = new hipLoggerObj({
+var hipLogger = new HipLoggerObj({
     'room-name': '<hip-chat-room-id>', // room to send message to
     'notify': true // optional notification alert to user when new message is sent to room - defaults is set to false
 });    

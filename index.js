@@ -31,6 +31,8 @@ function HipChatLogger(params) {
   };
 
   self.info = function (msg, fnName) {
+    console.log(arguments);
+    console.log('Calling info!');
     self.logger(msg, fnName, 'gray');
   };
   self.warning = function (msg, fnName) {
