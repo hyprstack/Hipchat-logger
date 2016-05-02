@@ -9,7 +9,7 @@ Nodejs Hipchat Logger - Get up to 100 messages every 5 minutes directly from you
 
 A great tool to make development easier when running apps on remote environments.
 
-__Note:__ Detailed instructions on how to use and working code to come shortly!
+# __Note:__ Is not yet a npm module! To be published soon!
 
 __Installation__
 
@@ -42,17 +42,17 @@ Call the functions passing in the `message` you wish to send to the room and `fu
 ```javascript
 // Sending a success message
 var successMsg = 'Function has ended with success!';
-hipLogger.info(successMsg, 'Function myCoolFunction');
+hipLogger.info(successMsg, 'myCoolFunction');
 
 // Sending a warning message
 var warningMsg = 'Something has gone wrong! Watch out!';
-hipLogger.warning(warningMsg, 'Function checkingFunction');
+hipLogger.warning(warningMsg, 'checkingFunction');
 
 // Sending an error message
 var errorMsg = 'There was an error with running your function!';
 // Or you can send an error object
 var errorMsg = new Error('There was an error with running your function!');
-hipLogger.error(errorMsg, 'Function errorFunction');
+hipLogger.error(errorMsg, 'errorFunction');
 ```
 
 
