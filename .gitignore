@@ -33,4 +33,7 @@ Thumbs.db
 
 .idea
 node_modules
+listOfTodos.md
+config.json
+cli.js
 

@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/hyprstack/Hipchat-logger/issues"
   },
-  "homepage": "https://github.com/hyprstack/Hipchat-logger"
+  "homepage": "https://github.com/hyprstack/Hipchat-logger",
+  "dependencies": {
+    "jsonfile": "^2.3.0"
+  }
 }
