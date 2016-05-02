@@ -4,19 +4,25 @@
 'use strict';
 
 function HipChatLogger(params) {
-  //params is {'room-name': <name of room>}
   var main = require('./lib/modules/main');
   var requestHandle = require('./lib/modules/request-manager/http-request-module');
   var extend = require('util')._extend;
   var jsonfile = require('jsonfile');
   var self = this;
 
+  // ensure config.json exists
+  try {
+    jsonfile.readFileSync('./config.json');
+  } catch (err) {
+    jsonfile.writeFileSync('./config.json', {'hip-chat-access-token': ''});
+  }
+
   var defaults = {
     'roomId': '', //room id for hipchat
     'notify': false // default is set to false - true sets room notification for user
   };
-  if (!params['room-name']) {
-    console.log('Error: Room-id is missing in params object!');
+  if (!params.roomId) {
+    console.log('Error: roomId is missing in params object!');
     return;
   }
 
@@ -27,7 +33,13 @@ function HipChatLogger(params) {
       msg = JSON.stringify(msg, null, 2);
     }
     var access_token = jsonfile.readFileSync('./config.json')['hip-chat-access-token'];
-    requestHandle.sendHipMessage(self.config.roomId, colour, msg, fnName, self.config.notify, access_token);
+    main.run('./config.json', function (err) {
+      if (err) {
+        console.log('Error running Node-Hipchat-Logger: ' + err);
+        return;
+      }
+      requestHandle.sendHipMessage(self.config.roomId, colour, msg, fnName, self.config.notify, access_token);
+    });
   };
 
   self.info = function (msg, fnName) {
@@ -42,16 +54,7 @@ function HipChatLogger(params) {
     self.logger(msg, fnName, 'red');
   };
 
-  main.run('./config.json', function (err) {
-    if (err) {
-      console.log('There was an error setting up the configs: ' + err);
-      return;
-    }
-    return self;
-  });
+  return self;
 }
 
 module.exports = HipChatLogger;
-
-
-
