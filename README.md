@@ -11,6 +11,10 @@ A great tool to make development easier when running apps on remote environments
 
 # __Note:__ Is not yet a npm module! To be published soon!
 
+TODO: 
+    - Add Travis
+    - Add Tests
+
 __Installation__
 
 `npm install Node-Hipchat-Logger --save`
