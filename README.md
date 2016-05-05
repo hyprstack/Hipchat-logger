@@ -14,6 +14,7 @@ A great tool to make development easier when running apps on remote environments
 TODO: 
     - Add Travis
     - Add Tests
+    - Refactor using ES6
 
 __Installation__
 
