@@ -20,6 +20,14 @@ __Installation__
 
 `npm install Node-Hipchat-Logger --save`
 
+__If you already have a private access token with hipchat__
+
+If you already have a private access token you can run the following command to test the module.
+
+__First create__ _config.json_ in the module directory and write:
+
+`{"hip-chat-access-token":"<your token goes here>"}`
+
 __Set-up__
 
 
